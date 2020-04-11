@@ -40,6 +40,10 @@ function draw() {
     saveDrawing();
     
 });
+form.button2.mousePressed(() => {
+  clearDrawing();
+  
+});
 
 }
 function start(){
@@ -62,5 +66,10 @@ function saveDrawing(){
   function dataSent(status){
     console.log(status);
   }
+}
+function clearDrawing(){
+  drawing=[];
+  var ref = database.ref('drawing');
+  ref.remove();
 }
 
